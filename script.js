@@ -138,10 +138,7 @@ board.addEventListener('click',(event)=>{
     if(moveCombination.length){
         checkIfContinueGame(moveCombination, event.target.classList[1])
     }
-    
 });
-
 
 //TODO Add Game Over Screen
 //TODO Add icons locally, not fromCDN
-//TODO Clicking start restart 
