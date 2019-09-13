@@ -141,3 +141,4 @@ board.addEventListener('click',(event)=>{
 
 
 //TODO Add Game Over Screen
+//TODO Add icons locally, not fromCDN
