@@ -13,7 +13,7 @@ let moveCombination=[];
 let currentLevelValue=1;
 let moveNumber = 0;
 const colorsPad=['red', 'blue', 'yellow', 'green'];
-let soundEnable = true;
+let soundEnable = false;
 
 
 //Get random pad
@@ -124,15 +124,20 @@ startRestartButton.addEventListener('click', ()=>{
     setTimeout(()=>getNextMove(moveCombination), 500);
 });
 
+soundButton.addEventListener('click',()=>{
+    soundEnable ? soundButton.innerHTML= '<i class="fas fa-volume-mute"></i>'
+                : soundButton.innerHTML= '<i class="fas fa-volume-up"></i>';
+    soundEnable = !soundEnable;
+})
 
 //CONTINUE GAME
 //When player click Color Pad 
 board.addEventListener('click',(event)=>{
     if(moveCombination.length){
-        
         checkIfContinueGame(moveCombination, event.target.classList[1])
     }
     
 });
+
 
 //TODO Add Game Over Screen
