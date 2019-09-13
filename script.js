@@ -121,6 +121,7 @@ bestScoreElement.textContent = localStorage.getItem('record');
 //When player click START button
 startRestartButton.addEventListener('click', ()=>{
     moveCombination=[];
+    moveNumber = 0;
     currentLevelValue = 1
     changeDOMElementValue(currentLevelElement, currentLevelValue);
     setTimeout(()=>getNextMove(moveCombination), 500);
