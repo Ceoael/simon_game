@@ -121,6 +121,8 @@ bestScoreElement.textContent = localStorage.getItem('record');
 //When player click START button
 startRestartButton.addEventListener('click', ()=>{
     moveCombination=[];
+    currentLevelValue = 1
+    changeDOMElementValue(currentLevelElement, currentLevelValue);
     setTimeout(()=>getNextMove(moveCombination), 500);
 });
 
@@ -142,3 +144,4 @@ board.addEventListener('click',(event)=>{
 
 //TODO Add Game Over Screen
 //TODO Add icons locally, not fromCDN
+//TODO Clicking start restart 
