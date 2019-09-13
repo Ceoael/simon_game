@@ -111,6 +111,7 @@ function displayNextMove(pad){
 function getNextMove(arrayOfMoveCombination){
     pushNextMoveToArray(arrayOfMoveCombination, getNextRandomPad, colorsPad);
     displayNextMove(arrayOfMoveCombination[arrayOfMoveCombination.length-1]);
+    soundEffect('pad',soundEnable)
 }
 
 if(localStorage.getItem('record'))
